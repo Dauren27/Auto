@@ -52,7 +52,9 @@ const Login = () => {
                 }
             </div>
             <p>{message}</p>
-            <button onClick={()=>checkPassword()}>Войти</button>
+            <button onClick={()=>{
+                dispatch({type:'CHANGE_AUTH',payload: true});
+            localStorage.setItem('isAuth','true')}}>Войти</button>
         </Form>
     </Container>
   )
